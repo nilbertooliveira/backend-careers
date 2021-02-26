@@ -32,4 +32,4 @@ docker-compose exec phpfpm php artisan migrate --seed
 7. Executar testes
 `./vendor/bin/phpunit`
 ## Utilização das APIS
-[Documentação Postman](https://www.getpostman.com/collections/256f18e27c13afeed675)
+[Documentação Postman](https://www.getpostman.com/collections/73f00f2310ada9497150)
