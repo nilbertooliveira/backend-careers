@@ -2,12 +2,7 @@
 
 Foi utlizado a arquitetura abaixo para concepção do projeto.
 
-Services
-Repository
-ACL Dinamica
-Testes Unitários
-RestFull
-Docker
+Services, Repository, ACL Dinamica, Testes Unitários, RestFull e Docker.
 
 1. Clonar o repositório:
 `git clone https://github.com/nilbertooliveira/backend-careers.git`
