@@ -1,5 +1,14 @@
 ## Ambiente Docker
 
+Foi utlizado a arquitetura abaixo para concepção do projeto.
+
+Services
+Repository
+ACL Dinamica
+Testes Unitários
+RestFull
+Docker
+
 1. Clonar o repositório:
 `git clone https://github.com/nilbertooliveira/backend-careers.git`
 
@@ -24,5 +33,8 @@ Pass: Nil#123@
 ```
 docker-compose exec phpfpm php artisan migrate --seed
 ```
+
+7. Executar testes
+`./vendor/bin/phpunit`
 ## Utilização das APIS
 [Documentação Postman](https://www.getpostman.com/collections/256f18e27c13afeed675)
