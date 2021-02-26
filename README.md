@@ -1,7 +1,7 @@
 ## Ambiente Docker
 
 1. Clonar o repositório:
-`git clone https://github.com/nilbertooliveira/flights.git`
+`git clone https://github.com/nilbertooliveira/backend-careers.git`
 
 2. Instalar as dependências:
  ```
