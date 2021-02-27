@@ -31,7 +31,7 @@ docker-compose exec phpfpm php artisan migrate --seed
 `docker-compose exec phpfpm php artisan passport:install`
 
 8. Executar testes
-`./vendor/bin/phpunit`
+`docker-compose exec phpfpm php vendor/bin/phpunit`
 
 ## Utilização das APIS
 [Documentação Postman](https://documenter.getpostman.com/view/10569259/TWDcGadV)
