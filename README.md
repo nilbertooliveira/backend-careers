@@ -37,4 +37,16 @@ docker-compose exec phpfpm php artisan migrate --seed
 `docker-compose exec phpfpm php vendor/bin/phpunit`
 
 ## Utilização das APIS
+
+##### Usuário para gerenciamento dos jobs:
+```
+admin@admin.com
+123456
+```
+##### Usuários para visualição das vagas:
+```
+user@user.com
+123456
+```
+
 [Documentação Postman](https://documenter.getpostman.com/view/10569259/TWDcGadV)
