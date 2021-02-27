@@ -85,10 +85,10 @@ class JobRepository implements JobRepositoryInterface
                 'status' => $data['status'],
                 'salary' => isset($data['salary']) ? $data['salary'] : null,
             ];
-            $mJob->where('id', $id)->update($job);
+            $mJob = $mJob->where('id', $id)->updateOrCreate($job);
             DB::commit();
 
-            return $mJob->first();
+            return $mJob;
         } catch (Exception $e) {
             DB::rollback();
             throw new Exception($e->getMessage());
