@@ -35,7 +35,7 @@ services:
     links:
       - mysql
     volumes:
-      - ../:/app
+      - ./../:/app
       - ./custom.ini:/opt/bitnami/php/etc/conf.d/custom.ini
 
   nginx:
@@ -47,7 +47,7 @@ services:
       rede_docker:
         ipv4_address: 10.5.0.6
     volumes:
-      - ../:/app
+      - ./../:/app
       - ./server_block.conf:/opt/bitnami/nginx/conf/server_blocks/server_block.conf
     ports:
       - "8080:8080"
