@@ -30,7 +30,10 @@ docker-compose exec phpfpm php artisan migrate --seed
 7. Configurar o passport
 `docker-compose exec phpfpm php artisan passport:install`
 
-8. Executar testes
+8. Permissoes de pastas
+`sudo chmod -R 777 storage/ bootstrap/`
+
+9. Executar testes
 `docker-compose exec phpfpm php vendor/bin/phpunit`
 
 ## Utilização das APIS
