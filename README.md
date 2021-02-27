@@ -7,7 +7,7 @@ Services, Repository, ACL Dinamica, Testes Unitários, RestFull e Docker.
 1. Clonar o repositório:
 `git clone https://github.com/nilbertooliveira/backend-careers.git`
 
-2. Acessar a pasta do projeto "docker" e rodar o comando:
+2. Acessar a pasta do projeto "docker" e rodar os próximos comandos:
 `docker-compose up -d`
     
 3. Instalar as dependências:
