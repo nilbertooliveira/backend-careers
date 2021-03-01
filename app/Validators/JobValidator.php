@@ -7,7 +7,7 @@ use Illuminate\Validation\Rule;
 
 class JobValidator
 {
-    public $ruleCreate;
+    public $rule;
     public $customMessage;
 
     public function __construct()
@@ -17,13 +17,12 @@ class JobValidator
             'description' => 'required|max:10000',
             'status' => ['required', Rule::in(JobStatus::ACTIVE, JobStatus::INACTIVE)],
             'workplace' => 'array',
-            'state' => 'string',
-            'city' => 'string',
-            'district' => 'string',
-            'number' => 'numeric|min:0',
+            'workplace.state' => 'string',
+            'workplace.city' => 'string',
+            'workplace.district' => 'string',
+            'workplace.number' => 'integer|min:0',
             'salary' => 'numeric|min:0'
         ];
-
         $this->customMessage = [
             "status.in" => "The :attribute field is invalid, necessary status(" . JobStatus::ACTIVE . ", " . JobStatus::INACTIVE . ")"
         ];

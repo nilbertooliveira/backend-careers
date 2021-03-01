@@ -9,6 +9,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Schema;
 use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
@@ -32,18 +33,17 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Passport::routes();
-
-        try {
-            //sets permissions dynamically
+        /**
+         * Check if the table exists to avoid the error in the first execution of the migrate.
+         * Sets permissions dynamically
+         */
+        if (Schema::hasTable('permissions')) {
             $permissions = Permission::with('roles')->get();
-
             foreach ($permissions as $p) {
                 Gate::define($p->name, function (User $user) use ($p) {
                     return $user->hasRole($p->roles);
                 });
             }
-        } catch (QueryException $e) {
-            Log::error("First execution of the migration accuses error of lack of table.");
         }
     }
 }
